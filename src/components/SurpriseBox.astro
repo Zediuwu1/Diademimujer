@@ -1,0 +1,39 @@
+---
+const mensajes = [
+  "Eres mi razón de sonreír 💖",
+  "PASAFOTOCULO AMORCITO",
+  "Siempre estaré para ti mi reina hermosa✨",
+  "Eres mi mujer y solo mia sino te rompo el culo mi amor 💕"
+];
+---
+
+<section class="text-center mt-4">
+  <p 
+    id="mensaje-texto" 
+    class="fw-bold text-primary" 
+    style="cursor: pointer; transition: color 0.3s ease-in-out;">
+    Haz clic aquí 💖
+  </p>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const mensajes = [
+    "Eres mi razón de sonreír 💖",
+  "PASAFOTOCULO AMORCITO",
+  "Siempre estaré para ti mi reina hermosa✨",
+  "Eres mi mujer y solo mia sino te rompo el culo mi amor 💕"
+    ];
+    
+    const mensajeTexto = document.getElementById("mensaje-texto");
+
+    if (mensajeTexto) {
+      mensajeTexto.addEventListener("click", function () {
+        const nuevoMensaje = mensajes[Math.floor(Math.random() * mensajes.length)];
+        mensajeTexto.textContent = nuevoMensaje;
+        mensajeTexto.classList.toggle("text-primary");
+        mensajeTexto.classList.toggle("text-danger");
+      });
+    }
+  });
+</script>

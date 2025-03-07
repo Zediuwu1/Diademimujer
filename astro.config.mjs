@@ -1,9 +1,6 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
+import react from "@astrojs/react";
 
 export default defineConfig({
-  vite: {
-    server: {
-      hmr: false // Deshabilita el Hot Module Reloading (HMR), que incluye el toolbar
-    }
-  }
+  integrations: [react()],
 });
